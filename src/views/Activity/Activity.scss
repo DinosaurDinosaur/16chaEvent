@@ -1,0 +1,265 @@
+@import '@/assets/scss/vars/index.scss';
+
+.method {
+  padding-bottom: 5rem;
+
+  @media (max-width: 75em) {
+    padding-left: 0;
+  }
+
+  .scroll-area {
+    height: 60rem;
+  }
+}
+
+.method>.wrap {
+  width: 92rem;
+  margin: 0 auto;
+  padding: 8rem 0 0;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+    padding: 25rem 0 15rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 95%;
+  }
+}
+
+.method .content {
+  margin: auto;
+  padding: 6.5rem 9rem 6.5rem 14.5rem;
+  background-color: map-get($color, 'contentBG');
+  box-shadow: 0 0 10rem rgba(24, 125, 138, .65);
+  border-radius: 4rem;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    padding: 6.5rem 4.5rem 6.5rem 7.25rem;
+  }
+
+  // @media (max-width: 1100px) {
+  //   padding: 5.5rem 16rem 3.5rem;
+  // }
+
+  // @media (max-width: 1000px) {
+  //   padding: 5.5rem 12rem 3.5rem;
+  // }
+
+  // @media (max-width: 900px) {
+  //   padding: 5.5rem 8rem 3.5rem;
+  // }
+
+  // @media (max-width: 800px) {
+  //   padding: 5.5rem 6rem 3.5rem;
+  // }
+
+  // @media (max-width: 700px) {
+  //   padding: 5.5rem 4.5rem 3.5rem;
+  // }
+
+  @media (max-width: 640px) {
+    padding: 5rem 3rem;
+  }
+
+  .activity_title {
+    display: inline-block;
+    // background-color: map-get($color, 'primaryLight');
+    font-size: 2rem;
+    color: map-get($color, 'primaryLight');
+    font-weight: map-get($font-weight, 'bold');
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+
+    @media (max-width: 640px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .ps__rail-y {
+    width: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.28);
+
+    .ps__thumb-y {
+      width: 0.5rem;
+      background-color: rgba(63, 61, 61, .76);
+    }
+  }
+}
+
+.method .subtitle,
+.method .text {
+  max-width: 840px;
+}
+
+.method .text {
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0 4.5rem 4rem 0;
+  line-height: 1.6;
+
+  @media (max-width: 640px) {
+    font-size: 2rem;
+  }
+
+  h3:first-child {
+    margin-top: 0;
+  }
+
+  .small_title {
+    font-size: 1.6rem;
+    margin: 3.5rem 0 0;
+
+    @media (max-width: 640px) {
+      font-size: 2rem;
+    }
+  }
+
+  .activity_color {
+    color: map-get($color, 'light');
+  }
+
+  ul.point {
+    list-style-type: '•';
+    margin-top: 0.5rem;
+    margin-left: 1.8rem;
+
+    li {
+      padding-left: 0.6rem;
+    }
+
+    li::before {
+      font-size: 1rem;
+      margin-right: 0.3rem;
+    }
+
+    li>div {
+      padding-left: 1.8rem;
+    }
+  }
+}
+
+.method .content .btns {
+  text-align: center;
+  margin: 2.5rem auto 2rem auto;
+}
+
+.underline {
+  border-bottom: 0.2rem solid map-get($color, 'secondary');
+  line-height: 1.2;
+}
+
+.subtitle {
+  @media (max-width: 75em) {
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: 640px) {
+    align-items: baseline;
+
+    &::before {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  span {
+    text-align: left;
+  }
+}
+
+.subtitle>span {
+  @media (max-width: 75em) {
+    letter-spacing: 0.4rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.method {
+  .bg-left {
+    background-image: url(~@/assets/images/bg-left.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 41.7rem;
+    padding-bottom: 46.7rem;
+    position: absolute;
+    top: -15.2rem;
+    left: -24.4rem;
+    z-index: 10;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      left: -12.4rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-right {
+    background-image: url(~@/assets/images/bg-right-2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    width: 42rem;
+    padding-bottom: 53.7rem;
+    position: absolute;
+    bottom: -9.6rem;
+    right: -27.1rem;
+    z-index: 10;
+    pointer-events: none;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      right: -13.1rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-top-m {
+    background-image: url(~@/assets/images/bg-top-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 120rem;
+    padding-bottom: 31.8rem;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .bg-bottom-m {
+    background-image: url(~@/assets/images/bg-bottom-m-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 120rem;
+    padding-bottom: 25.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .bg-bottom {
+    bottom: -4.6rem;
+  }
+}

@@ -1,0 +1,246 @@
+@import '@/assets/scss/vars/index.scss';
+
+.code_content .content {
+  padding: 3.2rem 2rem 3rem;
+
+  @media (max-width: 75em) {
+    padding: 3.2rem 0 3rem;
+  }
+
+  .pageTitle {
+    margin-bottom: 2rem;
+  }
+
+  .ps .ps__rail-y {
+    width: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    .ps__thumb-y {
+      width: 0.5rem;
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.gift .content .page {
+  // max-width: 740px;
+  // width: 92.5%;
+  width: 100%;
+  margin: auto;
+
+  @media (max-width: 75em) {
+    width: 98%;
+  }
+}
+
+#exchange_error_popup {
+
+  // display: block;
+  .popup_header span,
+  .popup_body span {
+    display: block;
+  }
+}
+
+#exchange_success_popup {
+
+  // display: block;
+  .popup_body span {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+
+    &:last-child {
+      color: map-get($color, 'light');
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.username_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: map-get($font-weight, 'bold');
+  color: map-get($color, 'primaryLight');
+  letter-spacing: .3rem;
+  margin-bottom: 1.8rem;
+
+  @media (max-width: 640px) {
+    font-size: 3rem;
+  }
+
+  .username {
+    margin-right: 0.6rem;
+  }
+
+  .small_text {
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.content .point_details {
+  font-size: 2.2rem;
+  // font-weight: 500;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+
+  .text {
+    >p {
+      font-size: 1.8rem;
+      // font-weight: normal;
+      color: map-get($color, 'light');
+      text-align: center;
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+
+      @media (max-width: 640px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .point_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: map-get($font-weight, 'medium');
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 640px) {
+      font-size: 2.2rem;
+    }
+
+    p {
+      border-right: .15rem solid #fff;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      @media (max-width: 640px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      &:last-child {
+        border-right: unset;
+        margin: 0;
+      }
+
+      >span {
+        @media (max-width: 720px) {
+          display: block;
+        }
+      }
+
+      & .color {
+        color: map-get($color, 'primaryLight');
+      }
+    }
+  }
+}
+
+.gift .caption li:nth-of-type(1) {
+  color: map-get($color, 'light');
+}
+
+.gift {
+  .inner_page_wrap {
+    @media (max-width: 1200px) {
+      width: 90%;
+      padding: 25rem 0 20.5rem;
+    }
+
+    @media (max-width: 640px) {
+      width: 95%;
+    }
+  }
+
+  .bg-left {
+    background-image: url(~@/assets/images/bg-left.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 41.7rem;
+    padding-bottom: 46.7rem;
+    position: absolute;
+    top: -15.2rem;
+    left: -24.4rem;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      left: -12.4rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-right {
+    background-image: url(~@/assets/images/bg-right-1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    width: 42rem;
+    padding-bottom: 53.7rem;
+    position: absolute;
+    bottom: -9.6rem;
+    right: -27.1rem;
+    z-index: 10;
+    pointer-events: none;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      right: -13.1rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-top-m {
+    background-image: url(~@/assets/images/bg-top-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 120rem;
+    padding-bottom: 31.8rem;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .bg-bottom-m {
+    background-image: url(~@/assets/images/bg-bottom-m-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 120rem;
+    padding-bottom: 24.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+}

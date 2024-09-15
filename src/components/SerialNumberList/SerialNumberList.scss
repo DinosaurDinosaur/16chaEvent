@@ -1,0 +1,225 @@
+@import '@/assets/scss/vars/index.scss';
+
+.tab_page.code_details .grid {
+  width: 50%;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0.5rem 0;
+}
+
+.tab_page.code_details .td .grid {
+  border-right: 1px solid map-get($color, 'primaryLight');
+  padding: 1rem 0;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 720px) {
+    padding: 1.2rem 0;
+  }
+}
+
+.tab_page.code_details {
+  .tab_page .td {
+    position: relative;
+    padding: 0 0 5.5rem 0;
+  }
+
+  .el-table__body {
+    border-bottom: 1px solid map-get($color, 'primaryLight');
+  }
+
+  .el-table thead {
+    display: none;
+  }
+
+  .el-table table th,
+  .el-table table td {
+    border: unset;
+  }
+
+  .el-table .el-table__row {
+    td {
+      font-size: 1.8rem;
+      color: map-get($color, 'popupText');
+      border-bottom: 1px dotted #d7d7d7;
+
+      @media (max-width: 640px) {
+        font-size: 2.1rem;
+      }
+    }
+  }
+
+  .el-table {
+    border-radius: 0 0 2rem 2rem;
+
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .el-table .el-table__cell {
+    text-align: center;
+    padding: 1.8rem 0;
+  }
+
+  .el-pagination {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 2.5rem;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 500px) {
+      bottom: 1.5rem;
+    }
+
+    button:disabled svg {
+      opacity: .2;
+    }
+  }
+
+  .btn-quicknext,
+  .btn-quickprev {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .btn-quicknext svg,
+  .btn-quickprev svg {
+    visibility: hidden;
+  }
+
+  .btn-quicknext::after,
+  .btn-quickprev::after {
+    content: '...';
+    font-size: 1.4rem;
+    color: #656f66;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+
+  .el-pager {
+    padding: 0 1.2rem;
+  }
+
+  .el-pager li {
+    background: transparent;
+    font-size: 1.5rem;
+    color: #9ab49c;
+    min-width: 3.55rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+
+    @media (max-width: 720px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 640px) {
+      font-size: 2.1rem;
+      min-width: 2.5rem;
+    }
+
+  }
+
+  .el-pager li:hover {
+    color: map-get($color, 'primaryLight');
+  }
+
+  .is-active.number {
+    color: map-get($color, 'primaryLight');
+  }
+
+  .el-pagination .btn-prev,
+  .el-pagination .btn-next {
+    background-color: transparent;
+    width: 1.6rem;
+    height: 3rem;
+    color: #ffffff;
+    border-radius: 0.8rem;
+    padding: 0;
+
+    svg {
+      width: 1.6rem;
+      height: 3rem;
+      color: map-get($color, 'primaryLight');
+    }
+
+    span {
+      font-size: 1.5rem;
+
+      @media (max-width: 720px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    .el-icon {
+      font-size: 1.2rem;
+      line-height: initial;
+    }
+  }
+
+  .el-pagination button {
+    width: .8rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: .8rem;
+    background-position: center;
+
+    @media (max-width: 640px) {
+      background-size: 1rem;
+    }
+
+    &.btn-prev {
+      background-image: url(~@/assets/images/serial-number-arrow-prev.png);
+
+      &:disabled {
+        background-image: url(~@/assets/images/serial-number-arrow-prev_disabled.png);
+      }
+    }
+
+    &.btn-next {
+      background-image: url(~@/assets/images/serial-number-arrow-next.png);
+
+      &:disabled {
+        background-image: url(~@/assets/images/serial-number-arrow-next_disabled.png);
+      }
+    }
+
+    i {
+      display: none;
+    }
+  }
+
+  .el-pagination button:disabled {
+    // background-color: #ababab;
+    color: #777777;
+  }
+
+  .el-pagination button:hover {
+    color: #ffffff;
+  }
+
+  .el-table__row {
+    .table_exchange_item {
+      display: inline-block;
+    }
+  }
+
+  .el-table__cell {
+    p:nth-child(2) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.el-pagination button,
+.el-pagination span:not([class*=suffix]) {
+  min-width: initial;
+}

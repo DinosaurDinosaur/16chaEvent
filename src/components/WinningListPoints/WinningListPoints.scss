@@ -1,0 +1,179 @@
+@import '@/assets/scss/vars/index.scss';
+
+.winningList {
+  .text {
+    p {
+      br {
+        display: none;
+
+        @media (max-width: 75em) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .winning_subtitle {
+    font-weight: map-get($font-weight, 'medium');
+    margin-bottom: 2.3rem;
+
+    @media (max-width: 75em) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  .winning_box {
+    font-size: 2.25rem;
+    letter-spacing: 0;
+    font-weight: map-get($font-weight, 'light');
+    color: #fff;
+    // padding: 3rem 6rem;
+    border: .1rem solid map-get($color, 'primaryLight');
+    border-radius: 1.95rem;
+    // display: flex;
+    // justify-content: space-between;
+    // align-content: flex-start;
+    // flex-wrap: wrap;
+    // min-height: 40.1rem;
+    height: 40.1rem;
+    margin-top: 3.6rem;
+    position: relative;
+
+    @media (max-width: 1200px) {
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 640px) {
+      font-size: 2.2rem;
+      border: 1.2px solid map-get($color, 'primaryLight');
+    }
+
+    .winning_box_inner {
+      margin: 3rem 1rem 3rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      height: 33.9rem;
+      overflow-y: scroll;
+
+      @media (max-width: 850px) {
+        margin: 3.5rem 1rem 3.5rem 2.5rem;
+      }
+
+      @media (max-width: 640px) {
+        margin: 3rem 1rem 3rem 4.5rem;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.28);
+        border-radius: 1rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 0.5rem;
+        background-color: rgba(63, 61, 61, 0.76);
+        border-radius: 1rem;
+      }
+    }
+
+    li {
+      &:nth-child(1n+3) {
+        margin-top: 1.5rem;
+      }
+
+      &:nth-child(2n+2) {
+        margin-right: 5rem;
+
+        @media (max-width: 850px) {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &.notyet {
+      .winning_box_inner {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        li {
+          font-size: 2rem;
+          color: rgba(255, 255, 255, .6);
+        }
+      }
+    }
+  }
+
+  .winning_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li a {
+      font-size: 2.25rem;
+      letter-spacing: 0;
+      font-weight: map-get($font-weight, 'medium');
+      padding: 1rem 2rem;
+      background-color: #fff;
+      color: map-get($color, 'primaryLight');
+      border: .2rem solid map-get($color, 'primaryLight');
+      margin: 0 .8rem;
+      border-radius: 100px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      &.active {
+        background-color: map-get($color, 'primaryLight');
+        color: #fff;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          background-image: url(~@/assets/images/winning_arrow.png);
+          background-repeat: no-repeat;
+          background-size: 2rem;
+          background-position: top center;
+          width: 2rem;
+          height: 1.7rem;
+          position: absolute;
+          top: 145%;
+          transform: translate(-50%);
+          left: 50%;
+
+          @media (max-width: 1200px) {
+            top: 140%;
+          }
+
+          @media (max-width: 800px) {
+            top: 145%;
+          }
+
+          @media (max-width: 640px) {
+            background-image: url(~@/assets/images/winning_arrow_m.png);
+            width: 2.4rem;
+            height: 2rem;
+            top: 148%;
+          }
+        }
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 1.98rem;
+        padding: 0.8rem 1.8rem;
+        margin: 0 .6rem;
+      }
+
+      @media (max-width: 640px) {
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 800px) {
+        padding: 0.6rem 1.2rem;
+        margin: 0 .5rem;
+      }
+    }
+  }
+}

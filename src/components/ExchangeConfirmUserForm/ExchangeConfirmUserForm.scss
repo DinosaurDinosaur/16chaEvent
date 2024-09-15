@@ -1,0 +1,27 @@
+@import '@/assets/scss/vars/index.scss';
+
+.change_list2 ul {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.change_box.change_list2 {
+  .btns {
+    &.pc {
+      @media (max-width: 720px) {
+        display: none;
+      }
+    }
+
+    &.mb {
+      display: none;
+
+      @media (max-width: 720px) {
+        display: block;
+      }
+    }
+  }
+}

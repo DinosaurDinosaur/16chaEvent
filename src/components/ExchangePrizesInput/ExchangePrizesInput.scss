@@ -1,0 +1,142 @@
+@import '@/assets/scss/vars/index.scss';
+
+#exchange_form .input_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #454545;
+  position: relative;
+  padding: 0 4rem;
+  border-bottom: 1px solid #ececee;
+
+  @media (max-width: 1200px) {
+    // align-items: unset;
+    width: 100%;
+    padding: 0 1rem 0 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 2.3rem;
+  }
+
+  &:last-child {
+    border-bottom: unset;
+  }
+
+  &.active .remind {
+    display: block;
+  }
+
+  .gift_name {
+    letter-spacing: 1px;
+
+    @media (max-width: 720px) {
+      flex: 2;
+    }
+
+    // &.pc {
+    //   p:nth-child(2) {
+    //     @media (max-width: 720px) {
+    //       display: none;
+    //     }
+    //   }
+    // }
+
+    p {
+      display: inline-block;
+      padding: 2.5rem 0;
+    }
+
+    .remind p {
+      padding-top: 0;
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  // .gift_point {
+  //   &.mb {
+  //     display: none;
+
+  //     @media (max-width: 720px) {
+  //       // flex: 1;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       width: 15%;
+  //       letter-spacing: 1px;
+  //       border-right: 1px solid #309137;
+  //       padding: 2rem 0;
+  //     }
+  //   }
+  // }
+
+  .group {
+    width: 16rem;
+
+    @media (max-width: 720px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      padding: 0 1rem 0 1.5rem;
+    }
+
+    select,
+    input {
+      background-position: 90% 60%;
+      height: auto;
+      font-size: 1.8rem;
+      text-align: left;
+      color: map-get($color, 'primaryLight');
+      border-color: map-get($color, 'primaryLight');
+      padding: 0.3rem 2.5rem 0.3rem 1.5rem;
+
+      @media (max-width: 640px) {
+        font-size: 2.3rem;
+      }
+
+      &::placeholder {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: map-get($color, 'primaryLight');
+
+        @media (max-width: 1200px) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .remind {
+    display: block;
+    color: map-get($color, 'light');
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-top: -2.2rem;
+
+    @media (max-width: 720px) {
+      margin-left: 0;
+    }
+  }
+}
+
+#exchange_prize .input_wrap .gift_point {
+  // color: #ff2f37;
+  padding-left: 5%;
+
+  @media (max-width: 75em) {
+    padding-left: 4%;
+  }
+
+  @media (max-width: 420px) {
+    padding-left: 5.5%;
+  }
+}
+
+#exchange_prize .input_wrap .gift_point.mb {
+  @media (max-width: 720px) {
+    // padding: 4.6rem 0;
+  }
+}

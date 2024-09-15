@@ -1,0 +1,33 @@
+@import '@/assets/scss/vars/index.scss';
+
+.scroll-area {
+  position: relative;
+  margin: auto;
+  width: 98%;
+  height: 85rem;
+}
+
+.bigger {
+  width: 1280px * 2;
+  height: 720px * 2;
+}
+
+.content .ps .ps__rail-x {
+  display: unset;
+  opacity: unset;
+}
+
+.content .ps .ps__rail-y {
+  opacity: unset;
+  width: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  transition: unset;
+  .ps__thumb-y {
+    width: 0.8rem;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 1rem;
+    right: 0;
+    transition: unset;
+  }
+}

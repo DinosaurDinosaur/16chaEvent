@@ -1,0 +1,133 @@
+@import '@/assets/scss/vars/index.scss';
+
+.registered .msg {
+  font-size: 1.8rem;
+  color: map-get($color, 'light');
+  text-align: center;
+  letter-spacing: .5px;
+
+  @media (max-width: 640px) {
+    font-size: 2rem;
+  }
+}
+
+.registered .code_content {
+  position: relative;
+
+  .register_img {
+    width: 14.3rem;
+    height: 19.9rem;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 4rem;
+
+    @media (max-width: 75em) {
+      display: none;
+    }
+  }
+}
+
+.username_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: map-get($font-weight, 'bold');
+  color: map-get($color, 'primaryLight');
+  letter-spacing: .3rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 640px) {
+    font-size: 3rem;
+  }
+
+  .username {
+    margin-right: 0.6rem;
+  }
+
+  .small_text {
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.registered {
+  .bg-left {
+    background-image: url(~@/assets/images/bg-left.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 41.7rem;
+    padding-bottom: 46.7rem;
+    position: absolute;
+    top: -15.2rem;
+    left: -24.4rem;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      left: -12.4rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-right {
+    background-image: url(~@/assets/images/bg-right.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    width: 42rem;
+    padding-bottom: 53.7rem;
+    position: absolute;
+    bottom: -9.6rem;
+    right: -27.1rem;
+    pointer-events: none;
+
+    @media (max-width: 1500px) {
+      width: 35%;
+      right: -13.1rem;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .bg-top-m {
+    background-image: url(~@/assets/images/bg-top-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 120rem;
+    padding-bottom: 31.8rem;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .bg-bottom-m {
+    background-image: url(~@/assets/images/bg-bottom-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 120rem;
+    padding-bottom: 25.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+}

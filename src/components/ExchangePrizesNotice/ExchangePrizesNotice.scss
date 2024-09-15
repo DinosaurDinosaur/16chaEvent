@@ -1,0 +1,39 @@
+@import '@/assets/scss/vars/index.scss';
+
+.notice {
+  color: #454545;
+  padding: 0 4rem;
+
+  @media (max-width: 640px) {
+    padding: 0 1.5rem;
+  }
+
+  .caption {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+
+    @media (max-width: 640px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  ul {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: map-get($font-weight, 'regular');
+    padding-left: 1.4rem;
+
+    @media (max-width: 640px) {
+      font-size: 1.6rem;
+    }
+
+    li {
+      list-style: decimal;
+
+      &.color {
+        color: map-get($color, 'light');
+      }
+    }
+  }
+}

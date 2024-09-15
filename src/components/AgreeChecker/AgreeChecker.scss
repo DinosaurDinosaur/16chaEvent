@@ -1,0 +1,31 @@
+@import '@/assets/scss/vars/index.scss';
+
+.agree {
+  user-select: none;
+  margin-top: 3.5rem;
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    color: map-get($color, 'primaryLight');
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-left: 0.5rem;
+    letter-spacing: 2px;
+    padding-left: 1px;
+    font-weight: map-get($font-weight, 'medium');
+
+    @media (max-width: 640px) {
+      font-size: 2rem;
+    }
+
+    a {
+      color: map-get($color, 'primaryLight');
+      border-bottom: 1px solid map-get($color, 'primaryLight');
+    }
+  }
+}

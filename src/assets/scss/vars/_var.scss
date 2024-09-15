@@ -1,0 +1,43 @@
+$color: (
+  primary: #1c4721,
+  subtitle: #ffffff,
+  primaryLight: #57c36f,
+  coloreBG: #269e3d,
+  titleNameBG: #269e3d,
+  slideBorder: #269e3d,
+  secondary: #ffffff,
+  light: #f96133,
+  noticeText: #ff4300,
+  grayLight: #ababab,
+  // deco: #d73259,
+  menuActive: #57c36f,
+  innerPageTitle: #ffffff,
+  btnBG: #57c36f,
+  // btnBGHover: #e2272e,
+  contentBG: rgba(12, 12, 36, 0.6),
+  bodyBG: #ffffff,
+  headerBG: #ffffff,
+  whiteBG: #ffffff,
+  error: #d61518,
+  popupText: #454545,
+);
+
+// 1em = 16px
+$break-point: (
+  sp: '(max-width: 21.875em)',
+  phone: '(max-width: 40em)',
+  tablet: '(max-width: 60em)',
+  md3: '(max-width: 68.75em)',
+  md2: '(max-width: 78.75em)',
+  md1: '(max-width: 87.5em)',
+  wide: '(min-width: 120.0625em)',
+);
+
+$font-weight: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);

@@ -1,0 +1,76 @@
+@import '@/assets/scss/vars/index.scss';
+
+.winningList {
+  .text {
+    p {
+      br {
+        display: none;
+
+        @media (max-width: 75em) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .winning_subtitle {
+    font-weight: map-get($font-weight, 'medium');
+    margin-bottom: 2.3rem;
+
+    @media (max-width: 75em) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  .winning_box {
+    font-size: 2.25rem;
+    letter-spacing: 0;
+    font-weight: map-get($font-weight, 'light');
+    color: #fff;
+    padding: 3rem 6rem;
+    border: .1rem solid map-get($color, 'primaryLight');
+    border-radius: 1.95rem;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    min-height: 39rem;
+    margin-top: 3.6rem;
+    position: relative;
+
+    @media (max-width: 1200px) {
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 800px) {
+      padding: 3.5rem 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      padding: 3rem 4.5rem;
+      font-size: 2.2rem;
+      border: 1.2px solid map-get($color, 'primaryLight');
+    }
+
+    @media (max-width: 500px) {
+      padding: 3rem 3.5rem;
+    }
+
+    li {
+      &:nth-child(1n+3) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &.notyet {
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      li {
+        font-size: 2rem;
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '@/assets/scss/vars/index.scss';
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  background-color: map-get($color, 'primaryLight');
+  color: map-get($color, 'subtitle');
+  position: relative;
+  font-weight: 500;
+  @media (max-width: 720px) {
+    font-size: 2.6rem;
+    font-weight: normal;
+  }
+}
+
+.subtitle > span {
+  text-align: center;
+  position: relative;
+  letter-spacing: 0.5px;
+  margin: 0.8rem 1.5rem;
+}

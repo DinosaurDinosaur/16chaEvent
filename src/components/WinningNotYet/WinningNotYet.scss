@@ -1,0 +1,12 @@
+@import '@/assets/scss/vars/index.scss';
+
+.winner {
+  .text p {
+    br {
+      display: none;
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
+  }
+}
