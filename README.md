@@ -7,11 +7,9 @@ nodejs-version：v12.14.0
 技術：<br>
 Vue3、vue-cli4、vuex、scss、RWD、Google api、Facebook api
 
-
-
-# npm i ( in order to install node_modules )
-# npm run https
-# npm run build
+npm i ( in order to install node_modules )
+npm run https
+npm run build
 
 
 
